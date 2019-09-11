@@ -12,12 +12,10 @@
 <script>
     function showPrime() {
         let number = parseInt(document.getElementById("number").value);
-        let count = 0;
         let text = '';
         let i = 1;
-        while (count < number) {
+        while (i <= number) {
             if (isPrime(i)) {
-                count++;
                 text += i + ' ';
             }
             i++;
