@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prime number</title>
+</head>
+<body>
+<h3>Enter a number: </h3>
+<input type="text" id="number">
+<button type="button" onclick="showPrime()">Show</button>
+<p id="text"></p>
+<script>
+    function showPrime() {
+        let number = parseInt(document.getElementById("number").value);
+        let count = 0;
+        let text = '';
+        let i = 1;
+        while (count < number) {
+            if (isPrime(i)) {
+                count++;
+                text += i + ' ';
+            }
+            i++;
+        }
+        let show = document.getElementById('text');
+        show.innerHTML = text;
+    }
+
+    // Check is prime number
+    function isPrime(num) {
+        if (num < 2) {
+            return false;
+        }
+        for (let i = 2; i < num; i++)
+            if (num % i === 0) return false;
+        return true;
+    }
+</script>
+</body>
+</html>

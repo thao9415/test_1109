@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function getTotal(array) {
+        if (array.length != array[0].length) {
+            alert("Đây không phải ma trận vuông");
+        } else {
+            let total = 0;
+            for (let i = 0; i < array.length; i++) {
+                for (let j = 0; j < array[i].length; j++) {
+                    if (i == j) {
+                        total = total + array[i][j];
+                    }
+                }
+            }
+            document.write("Tổng đường chéo chính của ma trận vuông = "+total);
+        }
+    }
+    let array1 = [
+        [1, 2, 1, 24],
+        [8, 11, 9, 4],
+        [7, 0, 7, 27],
+        [7, 4, 28, 14]
+    ];
+    getTotal(array1);
+</script>
+</body>
+</html>

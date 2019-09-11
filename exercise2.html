@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function totalOdd(array) {
+        let amount = parseInt(prompt("Mời nhập vào số lượng phần từ trong mảng : "));
+        let element;
+        array = new Array();
+        for (let i = 0; i < amount; i++) {
+            element = (parseInt(prompt("Mời nhập vào phần tử ở vị trí " + i)));
+            array.push(element);
+        }
+        let total = 0;
+        for (let i = 0; i < array.length; i++) {
+            if (array[i] % 2 != 0) {
+                total = total + array[i];
+            }
+        }
+        document.write("Tổng các số lẻ trong mảng là: " + total);
+    }
+
+    totalOdd();
+</script>
+
+</body>
+</html>
